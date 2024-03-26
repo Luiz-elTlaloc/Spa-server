@@ -1,4 +1,5 @@
 const { model, Schema } = require("mongoose");
+
 const userSchema = new Schema(
   {
     email: {
@@ -19,4 +20,5 @@ const userSchema = new Schema(
     timestamps: true,
   }
 );
+
 module.exports = model("User", userSchema);

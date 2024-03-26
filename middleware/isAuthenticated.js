@@ -1,6 +1,8 @@
 const jwt = require("jsonwebtoken");
+
 const isAuthenticated = (req, res, next) => {
   const token = req.headers.authorization?.split(" ")[1];
+
   if (!token || token === "null") {
     return res.status(400).json({ message: "Token not found" });
   }
@@ -15,4 +17,5 @@ const isAuthenticated = (req, res, next) => {
   }
   
 };
+
 module.exports = isAuthenticated;

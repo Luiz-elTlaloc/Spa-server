@@ -19,9 +19,13 @@ app.enable('trust proxy');
 
 app.use(
     cors({
-        origin: [process.env.REACT_APP_URI]
+      origin: [process.env.REACT_APP_URI, 'http//localhost:4000', 'http://localhost:5173']  // <== URL of our future React app
     })
-)
+  );
+
+// app.use(
+//     cors()
+//   );
 
 // app.use('/', indexRouter);
 app.use('/users', usersRouter);
