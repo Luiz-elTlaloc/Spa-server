@@ -88,7 +88,7 @@ router.get("/details/:treatmentId", (req, res, next) => {
       return;
     }
   
-    Project.findByIdAndDelete(treatmentId)
+    Treatment.findByIdAndDelete(treatmentId)
       .then((deletedTreatment) => {
         console.log("This is our deleted project", deletedTreatment);
         let treatmentIds = [...deletedTreatment.treatments];
