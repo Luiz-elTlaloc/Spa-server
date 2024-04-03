@@ -1,13 +1,13 @@
 var express = require('express');
 var logger = require('morgan');
-
-var cors = require('cors')
 var mongoose = require('mongoose')
+var cors = require('cors')
 
 // var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var authRouter = require('./routes/auth');
-var photosRouter = require('./routes/photos')
+var treatmentRouter = require('./routes/treatment');
+var promoRouter = require('./routes/promo')
 
 var app = express();
 
@@ -30,7 +30,9 @@ app.use(
 
 // app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/auth', authRouter)
+app.use('/treatments', treatmentRouter);
+app.use('/promo', promoRouter)
+app.use('/auth', authRouter);
 
 mongoose
   .connect(process.env.MONGODB_URI)

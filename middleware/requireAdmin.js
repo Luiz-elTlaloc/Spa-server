@@ -10,10 +10,10 @@ const requireAdmin = (req, res, next) => {
     }
   };
   
-  app.post('/auth/signup', (req, res) => {
-    if (!req.body.role || req.body.role !== 'admin') {
-      req.body.role = 'user';
-    }
-  });
+  // app.post('/auth/signup', (req, res) => {
+  //   if (!req.body.role || req.body.role !== 'admin') {
+  //     req.body.role = 'user';
+  //   }
+  // });
 
   module.exports = requireAdmin
