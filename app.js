@@ -6,7 +6,7 @@ var cors = require('cors')
 // var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var authRouter = require('./routes/auth');
-var treatmentRouter = require('./routes/treatment');
+var treatmentRouter = require('./routes/treatments');
 var promoRouter = require('./routes/promo')
 
 var app = express();
