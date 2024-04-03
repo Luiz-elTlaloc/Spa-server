@@ -1,7 +1,7 @@
 const Promo = require('../models/Promo')
 
 const promoCreate = (req, res, next) => {
-  const { image, title, description, projectId } = req.body;
+  const { image } = req.body;
 
   Promo.create({
     image,

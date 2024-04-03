@@ -29,7 +29,6 @@ router.post('/', isAuthenticated, (req, res, next) => {
 
 router.get('/', (req, res, next) => {
     Treatment.find()
-    .populate('treatments')
     .then((foundTreatments) => {
         console.log('Found Treatments ===>', foundTreatments);
         res.json(foundTreatments);
@@ -49,7 +48,6 @@ router.get("/details/:treatmentId", (req, res, next) => {
     }
   
     Treatment.findById(treatmentId)
-      .populate("treatments")
       .then((foundTreatment) => {
         console.log("Found project ===>", foundTreatment);
         res.json(foundTreatment);

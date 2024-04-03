@@ -26,7 +26,7 @@ router.post('/', isAuthenticated, (req, res, next) => {
 
 router.get('/', (req, res, next) => {
     Promo.find()
-    .populate('promo')
+    .populate('owner')
     .then((foundPromos) => {
         console.log('Found Promos ===>', foundPromos);
         res.json(foundPromos);

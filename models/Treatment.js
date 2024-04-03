@@ -8,8 +8,7 @@ const treatmentSchema = new Schema (
         },
         title: String,
         description: String,
-        table: String,
-        treatment: [{type: Schema.Types.ObjectId, ref:'Treatment'}],
+        details: [Object],
         owner: {type: Schema.Types.ObjectId, ref: 'User'}
     },
     {
